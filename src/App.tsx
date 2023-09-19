@@ -198,28 +198,10 @@ function App() {
         headers: {
           "Content-Type": "multipart/form-data",
         },
-        // cancelToken: cancelToken.token,
-        // onUploadProgress(progressEvent: AxiosProgressEvent) {
-        //   if (progressEvent?.progress && progressEvent?.total) {
-        //     let percen = Math.round(100 * progressEvent.progress);
-
-        //     TempFile[index][id].progress = percen;
-        //     TempFile[index][id].estimated = progressEvent.estimated || 0;
-        //     setFiles([...TempFile]);
-        //   }
-        // },
+   
       })
-      // .catch((error) => {
-      //   if (axios.isCancel(error)) {
-      //     // Do something when user cancel upload
-      //     TempFile[index][id].status = 2;
-      //     setFiles([...TempFile]);
-      //     console.log(error.message);
-      //   }
-      // });
-
+    
     if (res?.status === 200) {
-      // TempFile[index][id].status = 3;
       setFiles([...TempFile]);
     }
   };
